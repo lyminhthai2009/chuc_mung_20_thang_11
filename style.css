@@ -2,54 +2,57 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden; /* Quan trọng: để tránh thanh cuộn */
+    overflow: hidden;
 }
 
 /* LỚP NỀN TÙY CHỈNH */
 #custom-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
     background-size: cover;
     background-position: center;
     z-index: -1;
-    transition: background-image 1s ease-in-out;
 }
 
 /* CÁC MÀN HÌNH */
 .screen {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: opacity 0.8s ease-in-out; /* Hiệu ứng chuyển trang mượt */
+    transition: opacity 0.8s ease-in-out;
 }
 
-/* Lớp ẩn/hiện */
 .hidden {
     opacity: 0;
-    pointer-events: none; /* Không cho phép click khi đang ẩn */
+    pointer-events: none;
 }
 
-/* MÀN HÌNH 1: MỞ THIỆP */
-#welcome-screen button {
-    padding: 15px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 50px;
-    background-color: #ff4081;
-    color: white;
-    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
-    transition: transform 0.2s;
+/* MÀN HÌNH 1: BÓ HOA */
+#flower-screen {
+    background-color: #fce4ec; /* Màu nền hồng nhạt cho màn hình đầu */
 }
-#welcome-screen button:hover {
+#flower-bouquet {
+    max-width: 250px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#flower-bouquet:hover {
     transform: scale(1.1);
+}
+#flower-screen p {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #555;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
 }
 
 /* MÀN HÌNH 2: NỘI DUNG THƯ */
@@ -80,44 +83,15 @@ body {
     transform: scale(1.2);
 }
 
-/* MÀN HÌNH 3: VÒNG XOAY KỶ NIỆM (Phần 4) */
-#animation-screen .center-card {
-    position: absolute;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    z-index: 10;
-    width: 350px;
+/* MÀN HÌNH 3: ANIMATION PARALLAX */
+#animation-screen {
+    /* Bật không gian 3D để tạo hiệu ứng chiều sâu */
+    perspective: 1000px;
 }
-
-#animation-screen .center-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.orbit-image {
+.parallax-image {
     position: absolute;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: opacity 0.5s ease;
-    opacity: 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    /* Dùng transform để định vị trong không gian 3D */
     will-change: transform;
-}
-        
-.heart {
-    position: absolute;
-    bottom: -30px;
-    font-size: 24px;
-    color: #e91e63;
-    animation: fly-up 10s linear infinite;
-    user-select: none;
-}
-
-@keyframes fly-up {
-    to {
-        transform: translateY(-110vh);
-        opacity: 0;
-    }
 }
