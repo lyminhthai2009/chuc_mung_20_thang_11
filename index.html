@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Món Quà Tặng Cô</title>
+    <!-- Liên kết đến file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Lớp nền tùy chỉnh -->
+    <div id="custom-background"></div>
 
+    <!-- Màn hình 1: Chào mừng -->
+    <div class="screen" id="welcome-screen">
+        <button id="open-letter-btn">💌 Mở Thiệp 💌</button>
+    </div>
+
+    <!-- Màn hình 2: Đọc thư -->
+    <div class="screen hidden" id="letter-screen">
+        <div class="letter-content">
+            <p id="letter-text"></p>
+            <button class="next-button" id="start-animation-btn">→</button>
+        </div>
+    </div>
+
+    <!-- Màn hình 3: Animation Kỷ Niệm (Phần 4) -->
+    <div class="screen hidden" id="animation-screen">
+        <div class="center-card">
+            <img id="center-card-image" src="" alt="Ảnh kỷ niệm">
+        </div>
+        <!-- Các ảnh và tim sẽ được JS thêm vào đây -->
+    </div>
+
+    <!-- Liên kết đến file JavaScript (đặt ở cuối body) -->
+    <script src="script.js"></script>
+</body>
+</html>
