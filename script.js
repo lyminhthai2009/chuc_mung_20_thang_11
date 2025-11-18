@@ -13,10 +13,8 @@ const config = {
 
     // Danh sách các ảnh kỷ niệm sẽ chạy ngang
     parallaxImages: [
-        'images/ky-niem-1.jpg',
-        'images/ky-niem-2.jpg',
-        'images/ky-niem-3.jpg',
-        'images/ky-niem-4.jpg',
+        'images/kyniem1.jpg',
+        'images/kyniem2.jpg',
         // Thêm các ảnh khác vào đây...
     ]
 };
