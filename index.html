@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Món Quà Tặng Cô</title>
-    <!-- Liên kết đến file CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Lớp nền tùy chỉnh -->
     <div id="custom-background"></div>
 
-    <!-- Màn hình 1: Chào mừng -->
-    <div class="screen" id="welcome-screen">
-        <button id="open-letter-btn">💌 Mở Thiệp 💌</button>
+    <!-- Màn hình 1: Mở đầu với Bó hoa -->
+    <div class="screen" id="flower-screen">
+        <img src="" id="flower-bouquet" alt="Bó hoa tặng cô">
+        <p>Chạm vào bó hoa</p>
     </div>
 
     <!-- Màn hình 2: Đọc thư -->
@@ -24,15 +24,11 @@
         </div>
     </div>
 
-    <!-- Màn hình 3: Animation Kỷ Niệm (Phần 4) -->
+    <!-- Màn hình 3: Animation Parallax Ngang -->
     <div class="screen hidden" id="animation-screen">
-        <div class="center-card">
-            <img id="center-card-image" src="" alt="Ảnh kỷ niệm">
-        </div>
-        <!-- Các ảnh và tim sẽ được JS thêm vào đây -->
+        <!-- Các ảnh kỷ niệm sẽ được JS thêm vào đây -->
     </div>
 
-    <!-- Liên kết đến file JavaScript (đặt ở cuối body) -->
     <script src="script.js"></script>
 </body>
 </html>
